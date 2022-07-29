@@ -1,0 +1,64 @@
+
+.navParent{
+  display:flex;
+  transform:translateX(100%);
+}
+.navMenu{
+  /* visibility:hidden;
+  opacity: 0; */
+  position: relative;
+  display: flex;
+}
+.navMenuBar{
+  position:absolute;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+  visibility:hidden;
+  opacity: 0;
+}
+.navCloseBtn{
+  visibility:hidden;
+  opacity: 0;
+}
+
+@media only screen and (max-width:400px){
+  .navParent{
+    color:whitesmoke;
+    background-color:rgb(26, 25, 25);
+    height:100vh;
+    width:200px;
+    position: fixed;
+    top:0;
+    right:0;
+    padding:20px 20px;
+  }
+  .navMain{
+    position: relative;
+    width:100%;
+  }
+  .navMenu{
+    display:block;
+    margin-top:30px;
+  }
+  .navMenu li{
+    margin-top:5px;
+  }
+  .navMenuBar{
+    visibility:visible;
+    opacity: 1;
+  }
+  .navCloseBtn{
+    visibility:visible;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .responsiveMenu{
+    /* visibility:hidden;
+    opacity: 0; */
+    transform:translateX(0);
+    transition: all 0.4s ease-in-out;
+  }
+}

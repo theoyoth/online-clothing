@@ -1,0 +1,18 @@
+
+.navMenu{
+  visibility:hidden;
+  opacity: 0;
+}
+.navMenuBar{
+  position:absolute;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+}
+
+@media only screen and (max-width:400px){
+  .navBtn{
+    visibility:visible;
+    opacity: 1;
+  }
+}
