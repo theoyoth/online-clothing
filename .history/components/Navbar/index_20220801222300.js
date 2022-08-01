@@ -37,7 +37,7 @@ const Navbar = () => {
               Navigation
             </p>
           </div>
-          <ul className="md:flex md:basis-3/5 md:justify-between md:items-center md:text-black md:font-semibold lg:basis-[400px]">
+          <ul className="md:flex md:basis-3/5 md:justify-between md:items-center md:text-black md:font-semibold lg:basis-[450px]">
             <NavLink href="Shirts" />
             <NavLink href="Outerwears" />
             <NavLink href="Accessories" />
