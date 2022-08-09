@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from "React";
 import Layout from "@/components/Layouts/LayoutAnimation";
 import { useStateContext } from "@/lib/Context";
 import { AiOutlineShopping } from "react-icons/ai";
@@ -7,9 +7,16 @@ import { ImCross } from "react-icons/im";
 const BasketList = () => {
   const { cartItems, onRemove, totalPrice } = useStateContext();
 
-  useEffect(() => {
-    console.log(cartItems);
+  // useEffect(() => {
+  //   console.log(cartItems);
   }, [cartItems]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
+
 
   return (
     <Layout title="Basket">

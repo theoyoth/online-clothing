@@ -32,28 +32,24 @@ export const CartProvider = ({ children }) => {
     if (checkProductInCart) {
       const newCartItems = cartItems.filter((item) => item.id !== product.id);
 
-      const newCartUpdate = cartItems.filter(
-        (item) => item.id == product.id && item.size == size
-      );
+      // newCartItems.map((item) => {
+      //   if (item?.size !== size) {
+      //     setCartItems([
+      //       ...newCartItems,
+      //       { ...product, quantity: quantity, size: size },
+      //     ]);np
+      //   } else {
+      //     setCartItems([
+      //       ...newCartItems,
+      //       { ...product, quantity: product.quantity + quantity },
+      //     ]);
+      //   }
+      // });
 
-      cartItems.map((item) => {
-        if (item?.id == product.id && item?.size !== size) {
-          setCartItems([
-            ...cartItems,
-            { ...product, quantity: quantity, size: size },
-          ]);
-        } else if (item?.id == product.id && item?.size == size) {
-          setCartItems([
-            ...newCartItems,
-            { ...product, quantity: item.quantity + quantity },
-          ]);
-        }
-      });
-
-      // setCartItems([
-      //   ...newCartItems,
-      //   { ...product, quantity: product.quantity + quantity, size: size },
-      // ]);
+      setCartItems([
+        ...newCartItems,
+        { ...product, quantity: product.quantity + quantity, size: size },
+      ]);
     } else {
       product.quantity = quantity;
 

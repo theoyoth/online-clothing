@@ -1,14 +1,14 @@
-import { useEffect } from "react";
 import Layout from "@/components/Layouts/LayoutAnimation";
 import { useStateContext } from "@/lib/Context";
 import { AiOutlineShopping } from "react-icons/ai";
 import { ImCross } from "react-icons/im";
+import { useEffect } from "React";
 
 const BasketList = () => {
   const { cartItems, onRemove, totalPrice } = useStateContext();
 
   useEffect(() => {
-    console.log(cartItems);
+    console.log("fuck");
   }, [cartItems]);
 
   return (

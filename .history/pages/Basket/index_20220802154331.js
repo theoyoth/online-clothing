@@ -7,9 +7,15 @@ import { ImCross } from "react-icons/im";
 const BasketList = () => {
   const { cartItems, onRemove, totalPrice } = useStateContext();
 
+  // useEffect(() => {
+  //   console.log(cartItems);
+  // }, [cartItems]);
+
   useEffect(() => {
-    console.log(cartItems);
-  }, [cartItems]);
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
 
   return (
     <Layout title="Basket">

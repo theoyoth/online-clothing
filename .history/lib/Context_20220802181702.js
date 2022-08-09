@@ -43,9 +43,10 @@ export const CartProvider = ({ children }) => {
             { ...product, quantity: quantity, size: size },
           ]);
         } else if (item?.id == product.id && item?.size == size) {
+          product.quantity = quantity;
           setCartItems([
             ...newCartItems,
-            { ...product, quantity: item.quantity + quantity },
+            { ...product, quantity: product.quantity + quantity },
           ]);
         }
       });

@@ -39,13 +39,13 @@ export const CartProvider = ({ children }) => {
       cartItems.map((item) => {
         if (item?.id == product.id && item?.size !== size) {
           setCartItems([
-            ...cartItems,
+            ...newCartItems,
             { ...product, quantity: quantity, size: size },
           ]);
         } else if (item?.id == product.id && item?.size == size) {
           setCartItems([
             ...newCartItems,
-            { ...product, quantity: item.quantity + quantity },
+            { ...product, quantity: product.quantity + quantity },
           ]);
         }
       });

@@ -32,9 +32,9 @@ export const CartProvider = ({ children }) => {
     if (checkProductInCart) {
       const newCartItems = cartItems.filter((item) => item.id !== product.id);
 
-      const newCartUpdate = cartItems.filter(
-        (item) => item.id == product.id && item.size == size
-      );
+      // const newCartUpdate = cartItems.filter(
+      //   (item) => item.id == product.id && item.size == size
+      // );
 
       cartItems.map((item) => {
         if (item?.id == product.id && item?.size !== size) {
@@ -44,8 +44,8 @@ export const CartProvider = ({ children }) => {
           ]);
         } else if (item?.id == product.id && item?.size == size) {
           setCartItems([
-            ...newCartItems,
-            { ...product, quantity: item.quantity + quantity },
+            ...cartItems,
+            { ...product, quantity: product.quantity + quantity },
           ]);
         }
       });

@@ -32,20 +32,16 @@ export const CartProvider = ({ children }) => {
     if (checkProductInCart) {
       const newCartItems = cartItems.filter((item) => item.id !== product.id);
 
-      const newCartUpdate = cartItems.filter(
-        (item) => item.id == product.id && item.size == size
-      );
-
       cartItems.map((item) => {
-        if (item?.id == product.id && item?.size !== size) {
-          setCartItems([
-            ...cartItems,
-            { ...product, quantity: quantity, size: size },
-          ]);
-        } else if (item?.id == product.id && item?.size == size) {
+        if (item?.size !== size) {
           setCartItems([
             ...newCartItems,
-            { ...product, quantity: item.quantity + quantity },
+            { ...product, quantity: quantity, size: size },
+          ]);
+        } else {
+          setCartItems([
+            ...newCartItems,
+            { ...product, quantity: product.quantity + quantity },
           ]);
         }
       });

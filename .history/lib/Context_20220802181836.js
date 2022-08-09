@@ -45,7 +45,7 @@ export const CartProvider = ({ children }) => {
         } else if (item?.id == product.id && item?.size == size) {
           setCartItems([
             ...newCartItems,
-            { ...product, quantity: item.quantity + quantity },
+            { ...product, quantity: product.quantity + quantity },
           ]);
         }
       });
