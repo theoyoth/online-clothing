@@ -15,7 +15,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const dataDetail = OuterwearCollection.filter(
-    (d) => d.id.toString() === params.id
+    (d) => d.id === parseInt(params.id)
   );
   return {
     props: {
