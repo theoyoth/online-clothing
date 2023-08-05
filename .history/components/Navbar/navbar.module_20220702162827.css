@@ -1,0 +1,58 @@
+
+.navParent{
+  display:flex;
+}
+.navMenu{
+  /* visibility:hidden;
+  opacity: 0; */
+  position: relative;
+  display: flex;
+}
+.navMenuBar{
+  position:absolute;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+  visibility:hidden;
+  opacity: 0;
+}
+.navCloseBtn{
+  visibility:hidden;
+  opacity: 0;
+}
+
+@media only screen and (max-width:400px){
+  .navParent{
+    color:whitesmoke;
+    display:block;
+    background-color:rgb(26, 25, 25);
+    height:100vh;
+    width:200px;
+    position: absolute;
+    top:0;
+    right:0;
+    padding:20px 30px;
+    border:1px solid white;
+  }
+  .navMain{
+    position: relative;
+    border:1px solid white;
+  }
+  .navMenu{
+    margin-top:20px;
+  }
+  .navMenu li{
+    margin-top:5px;
+  }
+  .navMenuBar{
+    visibility:visible;
+    opacity: 1;
+  }
+  .navCloseBtn{
+    visibility:visible;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

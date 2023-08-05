@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family:'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* hide scrollbar */
+/* ================================ */
+* {
+  /* for explorer, edge */
+  -ms-overflow-style: none; 
+  /* for firefox */
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  /* for chrome, safari, and opera */
+  display: none;
+}
+/* ================================ */

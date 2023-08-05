@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hide scrollbar */
+/* ================================ */
+/* * { */
+  /* for explorer, edge */
+  /* -ms-overflow-style: none;  */
+  /* for firefox */
+  /* scrollbar-width: none; */
+/* } */
+/* ::-webkit-scrollbar { */
+  /* for chrome, safari, and opera */
+  /* display: none;
+} */
+/* ================================ */

@@ -1,0 +1,15 @@
+nav{
+  
+}
+
+.nav-btn{
+  visibility:hidden;
+  opacity: 0;
+}
+
+@media only screen and (max-width:400px){
+  .nav-btn{
+    visibility:visible;
+    opacity: 1;
+  }
+}
