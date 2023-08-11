@@ -2,7 +2,7 @@ import Image from "next/legacy/image";
 
 function PackageClothing() {
   return (
-    <div className="w-full grid md:grid-cols-2 h-[400px] py-6 px-4 gap-6">
+    <div className="w-full grid md:grid-cols-2 lg:h-[400px] py-2 lg:py-6 px-2 lg:px-4 gap-2 lg:gap-6">
       <div className="relative overflow-hidden">
         <Image
           src="/img/clothing/package-1.webp"

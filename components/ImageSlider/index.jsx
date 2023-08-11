@@ -18,9 +18,9 @@ const ImageSlider = () => {
         {ModelClothing.map((clothing,idx) => (
           <div
             key={idx}
-            className="flex justify-center items-center w-full h-screen relative growth-0 shrink-0 basis-full"
+            className="flex justify-center items-center w-full h-[300px] md:h-screen relative growth-0 shrink-0 basis-full"
           >
-            <Image src={clothing.url} alt={clothing.name} layout="fill" />
+            <Image src={clothing.url} alt={clothing.name} layout="fill" className='object-contain md:object-cover' />
         </div>
         ))}
       </div>

@@ -4,7 +4,7 @@ import { GridClothing } from "@/components/Reuse";
 
 const NewArrivalCome = () => {
   return (
-    <div className="mt-4">
+    <div className="mt-2 lg:mt-4">
       <h1 className="text-center text-3xl font-bold">New Arrivals</h1>
       <GridClothing>
         {NewComing.map((newcome, i) => (
